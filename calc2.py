@@ -62,7 +62,7 @@ def taylor_ln(x, terms=10):
 
 def calculate(num1, num2, operation):
     try:
-        if operation in ['Sine', 'Cosine', 'Tangent','Cotangent', 'Exp', 'Ln']:
+        if operation in ['Sine', 'Cosine', 'Tangent', 'Cotangent', 'Exp', 'Ln']:
             
             num1 = float(num1)
             if operation == 'Sine':
