@@ -31,6 +31,13 @@ def taylor_tangent(x, terms=10):
         return 'Error: tangent undefined at this input!'
     return taylor_sine(x, terms) / cosine
 
+def taylor_cotangent(x, terms=10):
+    
+    sine = taylor_sine(x, terms)
+    if sine == 0:
+        return 'Error: cotangent undefined at this input!'
+    return taylor_cosine(x, terms) / sine
+
 def taylor_exp(x, terms=10):
 
     exp = 0
@@ -55,7 +62,7 @@ def taylor_ln(x, terms=10):
 
 def calculate(num1, num2, operation):
     try:
-        if operation in ['Sine', 'Cosine', 'Tangent', 'Exp', 'Ln']:
+        if operation in ['Sine', 'Cosine', 'Tangent','Cotangent', 'Exp', 'Ln']:
             
             num1 = float(num1)
             if operation == 'Sine':
@@ -64,6 +71,8 @@ def calculate(num1, num2, operation):
                 return taylor_cosine(num1)
             elif operation == 'Tangent':
                 return taylor_tangent(num1)
+            elif operation == 'Cotangent':
+                return taylor_cotangent(num1)
             elif operation == 'Exp':
                 return taylor_exp(num1)
             elif operation == 'Ln':
@@ -96,7 +105,7 @@ operation = st.selectbox('Choose the operation:', ['Sum', 'Sub', 'Mult', 'Div', 
 
 
 if st.button('Calculate'):
-    if operation in ['Sine', 'Cosine', 'Tangent', 'Exp', 'Ln']:
+    if operation in ['Sine', 'Cosine', 'Tangent', 'Cotangent', 'Exp', 'Ln']:
     
         result = calculate(num1, None, operation)
     else:
