@@ -101,7 +101,7 @@ st.write('Choose two numbers (if applicable) and the operation you want to do.')
 
 num1 = st.text_input('Type in the first number')
 num2 = st.text_input('Type in the second number (leave blank for single-input operations)')
-operation = st.selectbox('Choose the operation:', ['Sum', 'Sub', 'Mult', 'Div', 'Sine', 'Cosine', 'Tangent', 'Exp', 'Ln'])
+operation = st.selectbox('Choose the operation:', ['Sum', 'Sub', 'Mult', 'Div', 'Sine', 'Cosine', 'Tangent','Cotangent', 'Exp', 'Ln'])
 
 
 if st.button('Calculate'):
